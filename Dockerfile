@@ -11,5 +11,6 @@ VOLUME /mattermost/data
 EXPOSE 80
 
 RUN chmod +x /mattermost/bin/platform
-ENTRYPOINT ["/mattermost/bin/platform"]
-CMD ["-config", "/mattermost/config/config.json"]
+WORKDIR /mattermost/bin
+
+ENTRYPOINT ["./platform"]
