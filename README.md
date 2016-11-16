@@ -1,7 +1,7 @@
 # mattermost-platform
 This repo is used to auto-build the hub.docker repo francoishill/mattermost-platform.
 
-Currently using **release 3.4.0** of [mattermost-platform](https://github.com/mattermost/platform)
+Currently using **release 3.5.0** of [mattermost-platform](https://github.com/mattermost/platform)
 
 ## Quick Start
 
