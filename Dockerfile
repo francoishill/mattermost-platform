@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get -y install curl netcat
 
-RUN curl https://releases.mattermost.com/3.10.0/mattermost-team-3.10.0-linux-amd64.tar.gz | tar -xvz
+RUN curl https://releases.mattermost.com/4.1.0/mattermost-team-4.1.0-linux-amd64.tar.gz | tar -xvz
 
 
 VOLUME /mattermost/config
