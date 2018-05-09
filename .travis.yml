@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t francoishill/mattermost-platform .
+  - docker push francoishill/mattermost-platform
