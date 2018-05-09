@@ -1,8 +1,12 @@
 sudo: required
 
 services:
-  - docker
+- docker
 
 script:
-  - docker build -t francoishill/mattermost-platform .
-  - docker push francoishill/mattermost-platform
+- docker build -t francoishill/mattermost-platform .
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push francoishill/mattermost-platform
+
+env:
+  secure: kptLoayV1UZybq5bagUf52XTVVmDL384HC+NZCrqFAdO8hnRdm2iiVUwipuEh0jLQ2GAQXGEEReWsxPRZsaDjCz+Ew0+1YUYgjXdlMQSIf7WWYKbzZZ0gG4y69HyVc9ucFOxJQm4fmdBVjOGwe/6yX0YeZlWMX1iCNgabOoRNyuWLfY9Pjp1vVcknkhgoshcdw+Nd8JTNH25NjwOek9MirnTBqFXlRrY6kOFKoP1g0dtKsIrJGSO2Rvz7V3twWOIq56p5HNzo1MA+7WA17UMzMQj7IgUMPPeVoheCraeDEmEVpcPEbVvmL2ttOyudkyHNmau+8owUfJyzd00u29mh38kRKSID5udTWqOZf1IOZAwE7BDyhAJ2jrfJ6zW3qHcZhW5jPexEkbJ//bgQzFlI4vo65Ku2e/bES6IKuv7I1/Metv0ZvdSAyPmEqvwYEOnwMmIRJWL8EmUhSUM0HhiPxP4GB6Xy/5Tw1JvtWNtrfdyhb6Wca3d+RP08IvCYQLdmd5/4sdmhLk47gLmQL9EOgzE4+FW8jvtoG7CKKKYj+7Hwf52x+vH8dWvzjD8bbeOXpS0yPTXHtHNrUt+wTMQtWpmcOSWSswK6JjrnijILQ7+wCf34hyyL5VxWRF7mfThV3CWehgfk0DUXtkTPEukPZo4vzYfr5jb32lsOVhf29I=
